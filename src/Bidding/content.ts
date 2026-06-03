@@ -79,7 +79,7 @@ export const NODES: Record<string, NodeDef> = {
   // AA: kneeling at hips. AAA = up at her face; AAB = her hipbone.
   AA: branch('AA',
     ch('choice.her_hair_falls', 'AAA', 55, 24),
-    ch('choice.her_hip_click',  'AAB', 60, 45),
+    ch('choice.let_her_settle', 'AAB', 60, 45),
   ),
 
   // AB: behind her at lacing. ABA = small of her back; ABB = side mirror.
@@ -91,7 +91,7 @@ export const NODES: Record<string, NodeDef> = {
   // BA: muslin lifted. BAA = her cheek; BAB = the fabric.
   BA: branch('BA',
     ch('choice.leans_into_muslin', 'BAA', 46, 32),
-    ch('choice.fabric_returns',    'BAB', 52, 38),
+    ch('choice.step_back_and_look', 'BAB', 52, 38),
   ),
 
   // BB: muslin lowered. BBA = central; BBB = sternum (where marks will be).
@@ -102,14 +102,16 @@ export const NODES: Record<string, NodeDef> = {
 
   // Layer 3 — endings (8)
   AAA: ending('AAA', 'sensual'),
-  AAB: ending('AAB', 'horror'),
+  // Reclassified to sensual after watching the actual video — Yu Han just
+  // finds her own pose, hand on hip. No supernatural cue rendered.
+  AAB: ending('AAB', 'sensual'),
   ABA: ending('ABA', 'sensual'),
   ABB: ending('ABB', 'horror'),
   BAA: ending('BAA', 'sensual'),
-  BAB: ending('BAB', 'horror'),
-  // BBA was originally sensual (sustained gaze). The generated still came
-  // back as multiple reflections of Yu Han in the mirrors — doppelganger
-  // horror. Flipped classification + retagged. Tree now 3 sensual / 5 horror.
+  // Reclassified to sensual after watching the actual video — the muslin
+  // billows huge around her like wings. Less "fabric self-moves" horror,
+  // more "she becomes the dress" sensual triumph.
+  BAB: ending('BAB', 'sensual'),
   BBA: ending('BBA', 'horror'),
   BBB: ending('BBB', 'horror'),
 };
